@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.4] - 2026-07-08
+
+### Added
+
+- CONTRIBUTING.md, SECURITY.md, GitHub issue templates.
+- Public distribution map with submission copy-paste values.
+
+### Changed
+
+- README expanded with badges, install paths, and directory links.
+- Logo aligned with devutils-mcp-server brand.
+- Plugin homepage points to this repository.
+
+### Removed
+
+- SUBMISSION_PACK.md (merged into DISTRIBUTION.md).
+
 ## [1.0.3] - 2026-07-08
 
 ### Added

@@ -1,0 +1,43 @@
+name: Bug report
+description: Plugin install, manifest, or documentation issue
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For **tool behavior** or server bugs, report at [devutils-mcp-server issues](https://github.com/paladini/devutils-mcp-server/issues).
+  - type: dropdown
+    id: client
+    attributes:
+      label: Client
+      options:
+        - Cursor
+        - Claude Code
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Plugin version
+      placeholder: e.g. 1.0.4
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: What did you do?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true

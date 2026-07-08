@@ -1,9 +1,12 @@
 {
   "name": "devutils-mcp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "36 local developer utilities (hash, encoding, UUID, JWT, JSON, network, text) via MCP — no external API calls.",
   "author": {
     "name": "Fernando Paladini",
     "email": "fnpaladini@gmail.com"
-  }
+  },
+  "repository": "https://github.com/paladini/devutils-cursor-plugin",
+  "homepage": "https://github.com/paladini/devutils-cursor-plugin#readme",
+  "license": "MIT"
 }
