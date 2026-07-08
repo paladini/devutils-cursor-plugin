@@ -35,7 +35,7 @@ Use this checklist before submitting the plugin to the Cursor Marketplace.
 
 ## Publish
 
-- [ ] Push repository to GitHub: `https://github.com/paladini/devutils-cursor-plugin`
+- [x] Push repository to GitHub: `https://github.com/paladini/devutils-cursor-plugin`
 - [ ] Submit repository link to Cursor team (Slack or `kniparko@anysphere.com`)
 - [ ] Wait for manual review before Marketplace listing
 
