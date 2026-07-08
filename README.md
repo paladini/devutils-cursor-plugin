@@ -2,6 +2,10 @@
 
 Cursor plugin that bundles the [devutils-mcp-server](https://github.com/paladini/devutils-mcp-server) MCP server, giving your AI assistant **36 local developer utilities** with zero external API calls.
 
+## What this plugin is
+
+This repository is a **thin Cursor plugin wrapper** around the published npm package [`devutils-mcp-server`](https://www.npmjs.com/package/devutils-mcp-server). The MCP server logic, tools, and maintenance live in the upstream repo; this plugin exists so users can install DevUtils from the Cursor Marketplace or test the official plugin layout locally.
+
 ## What it does
 
 When installed, this plugin registers an MCP server named `devutils` that runs via:
@@ -35,26 +39,51 @@ See the [devutils-mcp-server README](https://github.com/paladini/devutils-mcp-se
 2. Search for **DevUtils MCP**.
 3. Click **Install**.
 
-### Option 2 — Install from Git
+### Option 2 — Local plugin testing (official dev flow)
 
-1. Open **Cursor Settings → Customize**.
-2. Add this repository as a plugin source (or import via team marketplace).
-3. Install the **devutils-mcp** plugin.
-4. Enable the **devutils** MCP server in Customize.
+Cursor docs recommend loading plugins from `~/.cursor/plugins/local/` before publishing:
 
-### Option 3 — Local development
-
-Clone this repo and point Cursor to the local folder:
-
-```bash
+```powershell
 git clone https://github.com/paladini/devutils-cursor-plugin.git
+cd devutils-cursor-plugin
+powershell -ExecutionPolicy Bypass -File .\scripts\install-plugin-local.ps1
 ```
 
-Then install the plugin from the cloned directory via **Customize**.
+Then run **Developer: Reload Window** and verify the `devutils` MCP server appears under **Customize → MCPs**.
+
+Expected layout:
+
+```text
+%USERPROFILE%\.cursor\plugins\local\devutils-mcp\
+├── .cursor-plugin\plugin.json
+├── mcp.json
+└── ...
+```
+
+### Option 3 — MCP-only manual config
+
+If you only want the MCP server (no plugin install), add this to `~/.cursor/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "devutils": {
+      "command": "npx",
+      "args": ["-y", "devutils-mcp-server"]
+    }
+  }
+}
+```
+
+Or use the MCP install deeplink:
+
+```text
+cursor://anysphere.cursor-deeplink/mcp/install?name=devutils&config=eyJkZXZ1dGlscyI6eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsImRldnV0aWxzLW1jcC1zZXJ2ZXIiXX19
+```
 
 ## Requirements
 
-- [Cursor](https://cursor.com) 3.9+ (plugin system with Customize page)
+- [Cursor](https://cursor.com) with plugin/MCP support (Customize page on recent versions)
 - [Node.js](https://nodejs.org/) 18+ (for `npx` to run the MCP server)
 
 ## Plugin structure
@@ -66,6 +95,9 @@ devutils-cursor-plugin/
 ├── mcp.json               # MCP server definition (auto-detected)
 ├── assets/
 │   └── logo.svg
+├── scripts/
+│   ├── install-plugin-local.ps1
+│   └── install-local.ps1
 ├── README.md
 ├── CHANGELOG.md
 └── LICENSE

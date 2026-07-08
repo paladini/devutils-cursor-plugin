@@ -1,10 +1,11 @@
 {
   "name": "devutils-mcp",
   "displayName": "DevUtils MCP",
-  "description": "36 ferramentas locais de desenvolvimento (hash, encoding, UUID, JWT, JSON/YAML, rede, texto) via MCP, sem chamadas externas.",
-  "version": "1.0.0",
+  "description": "36 local developer utilities (hash, encoding, UUID, JWT, JSON, network, text) via MCP — no external API calls.",
+  "version": "1.0.1",
   "author": {
-    "name": "Fernando Paladini"
+    "name": "Fernando Paladini",
+    "email": "fnpaladini@gmail.com"
   },
   "homepage": "https://github.com/paladini/devutils-mcp-server#readme",
   "repository": "https://github.com/paladini/devutils-cursor-plugin",
