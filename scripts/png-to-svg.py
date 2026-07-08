@@ -8,40 +8,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 ICON_SVG = ROOT / "assets" / "logo.svg"
 
-LOGO_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="DevUtils MCP">
-  <title>DevUtils MCP</title>
-
-  <path d="M64 22 L30 46 L64 70 L98 46 Z" fill="#1E293B"/>
-  <path d="M30 46 L64 70 L64 118 L30 94 Z" fill="#3B82F6"/>
-  <path d="M98 46 L64 70 L64 118 L98 94 Z" fill="#2DD4BF"/>
-
-  <path d="M64 22 L30 46 L30 94 L64 118 L98 94 L98 46 Z" fill="none" stroke="#121826" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
-  <path d="M64 22 L64 70 L64 118" fill="none" stroke="#121826" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
-  <path d="M30 46 L64 70 L98 46" fill="none" stroke="#121826" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
-
-  <g fill="none" stroke="#FFFFFF" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M50 42 L58 48 L50 54"/>
-    <path d="M62 54 H76"/>
-  </g>
-
-  <g fill="none" stroke="#FFFFFF" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M38 58 C32 58 32 72 38 72 C32 72 32 86 38 86"/>
-    <path d="M52 58 C58 58 58 72 52 72 C58 72 58 86 52 86"/>
-  </g>
-
-  <g fill="none" stroke="#FFFFFF" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M78 58 L70 72"/>
-    <path d="M74 60 L68 78"/>
-    <path d="M90 58 L98 72"/>
-    <path d="M94 66 L90 72 L94 78"/>
-  </g>
-</svg>
-"""
-
 
 def main() -> None:
-    ICON_SVG.write_text(LOGO_SVG, encoding="utf-8")
-    print(f"Wrote {ICON_SVG}")
+    # Source of truth is assets/logo.svg — script exists for convenience only.
+    if not ICON_SVG.exists():
+        raise SystemExit(f"Missing {ICON_SVG}")
+    print(f"Logo present at {ICON_SVG} ({ICON_SVG.stat().st_size} bytes)")
 
 
 if __name__ == "__main__":
