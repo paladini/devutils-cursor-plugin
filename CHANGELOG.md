@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.3] - 2026-07-08
+
+### Added
+
+- Claude Code plugin manifest at `.claude-plugin/plugin.json`.
+- Multi-platform install instructions (Cursor, Claude Code, Official MCP Registry).
+
 ## [1.0.2] - 2026-07-08
 
 ### Removed
