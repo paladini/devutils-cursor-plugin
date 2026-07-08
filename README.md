@@ -9,7 +9,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/paladini/devutils-cursor-plugin?style=social&label=Star)](https://github.com/paladini/devutils-cursor-plugin/stargazers)
 
 <p align="center">
-  <img src="assets/devutils-mpc-logo.png" alt="DevUtils MCP Server logo" width="420">
+  <img src="assets/logo.svg" alt="DevUtils MCP logo" width="160">
 </p>
 
 Works with **Cursor** and **Claude Code**. A single `mcp.json` runs `npx -y devutils-mcp-server` locally.
