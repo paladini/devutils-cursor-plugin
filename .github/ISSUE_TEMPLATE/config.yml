@@ -4,5 +4,5 @@ contact_links:
     url: https://github.com/paladini/devutils-mcp-server/issues/new
     about: Report issues with the 36 MCP tools or npm package
   - name: Questions
-    url: https://github.com/paladini/devutils-cursor-plugin/issues/new
-    about: Ask questions about plugin install and usage
+    url: https://github.com/paladini/devutils-cursor-plugin/discussions/new
+    about: Ask questions in GitHub Discussions

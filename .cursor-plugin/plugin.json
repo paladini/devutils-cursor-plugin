@@ -2,7 +2,7 @@
   "name": "devutils-mcp",
   "displayName": "DevUtils MCP",
   "description": "36 local developer utilities (hash, encoding, UUID, JWT, JSON, network, text) via MCP — no external API calls.",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": {
     "name": "Fernando Paladini",
     "email": "fnpaladini@gmail.com"

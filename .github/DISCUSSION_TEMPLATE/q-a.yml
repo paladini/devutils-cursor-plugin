@@ -1,0 +1,23 @@
+title: "Question: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask about Cursor or Claude Code plugin install. For tool behavior, see [devutils-mcp-server discussions](https://github.com/paladini/devutils-mcp-server/discussions).
+  - type: dropdown
+    id: client
+    attributes:
+      label: Client
+      options:
+        - Cursor
+        - Claude Code
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true

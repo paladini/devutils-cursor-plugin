@@ -1,4 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="DevUtils">
+#!/usr/bin/env python3
+"""Create SVG assets from devutils-mpc-logo.png."""
+
+from __future__ import annotations
+
+import base64
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+PNG = ROOT / "assets" / "devutils-mpc-logo.png"
+ICON_SVG = ROOT / "assets" / "logo.svg"
+FULL_SVG = ROOT / "assets" / "logo-full.svg"
+
+
+def write_embedded_svg() -> None:
+    """Optional full-size SVG wrapper — skipped in repo (PNG used in README instead)."""
+    pass
+
+
+def write_icon_svg() -> None:
+    """Vector icon inspired by the toolbox logo — optimized for 128px plugin manifests."""
+    ICON_SVG.write_text(
+        """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="DevUtils">
   <defs>
     <linearGradient id="glow" x1="64" y1="18" x2="64" y2="72" gradientUnits="userSpaceOnUse">
       <stop stop-color="#4FD1C5" stop-opacity="0.55"/>
@@ -29,3 +51,17 @@
   <rect x="88" y="46" width="14" height="10" rx="2" fill="#319795"/>
   <text x="92" y="54" font-family="Arial, sans-serif" font-size="6" font-weight="700" fill="#fff">IP</text>
 </svg>
+""",
+        encoding="utf-8",
+    )
+
+
+def main() -> None:
+    if not PNG.exists():
+        raise SystemExit(f"Missing source PNG: {PNG}")
+    write_icon_svg()
+    print(f"Wrote {ICON_SVG}")
+
+
+if __name__ == "__main__":
+    main()

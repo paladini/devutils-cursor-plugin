@@ -24,6 +24,7 @@ See [devutils-mcp-server contributing](https://github.com/paladini/devutils-mcp-
 
 - Plugin install / marketplace: [devutils-cursor-plugin issues](https://github.com/paladini/devutils-cursor-plugin/issues)
 - Tool behavior / server: [devutils-mcp-server issues](https://github.com/paladini/devutils-mcp-server/issues)
+- Questions: [Discussions](https://github.com/paladini/devutils-cursor-plugin/discussions)
 
 ## Code of conduct
 

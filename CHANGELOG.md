@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.5] - 2026-07-08
+
+### Added
+
+- Logo SVG icon (`logo.svg`) derived from `devutils-mpc-logo.png`.
+- GitHub Discussions with Q&A template.
+- Star badge and full logo in README.
+- Scripts to regenerate SVG and demo GIF.
+
+### Changed
+
+- Plugin logo updated to toolbox brand.
+
 ## [1.0.4] - 2026-07-08
 
 ### Added

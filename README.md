@@ -6,6 +6,11 @@
 [![MCP](https://img.shields.io/badge/MCP-compatible-green)](https://modelcontextprotocol.io)
 [![npm](https://img.shields.io/badge/npm-devutils--mcp--server-red)](https://www.npmjs.com/package/devutils-mcp-server)
 [![Registry](https://img.shields.io/badge/Registry-active-blue)](https://registry.modelcontextprotocol.io)
+[![GitHub stars](https://img.shields.io/github/stars/paladini/devutils-cursor-plugin?style=social&label=Star)](https://github.com/paladini/devutils-cursor-plugin/stargazers)
+
+<p align="center">
+  <img src="assets/devutils-mpc-logo.png" alt="DevUtils MCP Server logo" width="420">
+</p>
 
 Works with **Cursor** and **Claude Code**. A single `mcp.json` runs `npx -y devutils-mcp-server` locally.
 
@@ -72,6 +77,8 @@ This plugin runs tools **locally on your machine**. No data is sent to the plugi
 ## Contributing
 
 Bug reports and plugin issues: [GitHub Issues](https://github.com/paladini/devutils-cursor-plugin/issues)
+
+Questions and ideas: [GitHub Discussions](https://github.com/paladini/devutils-cursor-plugin/discussions)
 
 New tools or server changes: contribute to [devutils-mcp-server](https://github.com/paladini/devutils-mcp-server). See [CONTRIBUTING.md](CONTRIBUTING.md).
 
