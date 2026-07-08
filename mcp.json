@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "devutils": {
+      "command": "npx",
+      "args": ["-y", "devutils-mcp-server"]
+    }
+  }
+}
