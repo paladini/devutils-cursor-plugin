@@ -1,5 +1,6 @@
 {
   "name": "devutils-mcp",
+  "version": "1.0.3",
   "description": "36 local developer utilities (hash, encoding, UUID, JWT, JSON, network, text) via MCP — no external API calls.",
   "author": {
     "name": "Fernando Paladini",

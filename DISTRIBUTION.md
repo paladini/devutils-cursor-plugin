@@ -1,34 +1,52 @@
-# Distribution
+# DevUtils — Distribution Map
 
-DevUtils is distributed across multiple channels. Each targets a different install path.
+Last updated: 2026-07-08
 
-| Channel | Repo | Status | Install |
+## Published and live
+
+| Store | Type | URL | Version | Notes |
+| --- | --- | --- | --- | --- |
+| **Official MCP Registry** | Canonical | https://registry.modelcontextprotocol.io | 1.1.0 | `io.github.paladini/devutils-mcp-server` — status **active** |
+| **npm** | Package | https://www.npmjs.com/package/devutils-mcp-server | 1.1.0 | `npx -y devutils-mcp-server` |
+| **Glama** | MCP directory | https://glama.ai/mcp/servers/paladini/devutils-mcp-server | indexed | Auto-crawled from GitHub |
+| **Smithery** | MCP directory | https://smithery.ai/server/devutils-mcp-server | indexed | `smithery.yaml` in server repo |
+| **awesome-ai-rabbit-holes** | Curated catalog | https://github.com/gabrielmoreira/awesome-ai-rabbit-holes | listed | `catalog/items/github/paladini/devutils-mcp-server.yml` |
+
+## Submitted — awaiting review
+
+| Store | Type | Repo submitted | Status |
 | --- | --- | --- | --- |
-| Cursor Marketplace | [devutils-cursor-plugin](https://github.com/paladini/devutils-cursor-plugin) | Submitted | Customize → DevUtils MCP |
-| cursor.directory | devutils-cursor-plugin | Submitted | Directory listing |
-| Claude Code | devutils-cursor-plugin | Submit manually | See below |
-| Official MCP Registry | [devutils-mcp-server](https://github.com/paladini/devutils-mcp-server) | Ready to publish | See [REGISTRY_PUBLISH.md](https://github.com/paladini/devutils-mcp-server/blob/main/REGISTRY_PUBLISH.md) |
-| npm | devutils-mcp-server | `1.0.0` live; `1.1.0` pending publish | `npx -y devutils-mcp-server` |
+| **Cursor Marketplace** | Plugin | `paladini/devutils-cursor-plugin` | Submitted by you — manual review |
+| **cursor.directory** | Plugin/MCP | `paladini/devutils-cursor-plugin` | Submitted by you — check listing |
 
-## Claude Code — submit
+## Ready to submit (copy-paste in SUBMISSION_PACK.md)
 
-1. Open https://platform.claude.com/plugins/submit
-2. Repository: `https://github.com/paladini/devutils-cursor-plugin`
-3. Plugin includes `.claude-plugin/plugin.json` + shared `mcp.json`
+| Store | Submit URL | Repo to use |
+| --- | --- | --- |
+| **Claude Code plugin** | https://platform.claude.com/plugins/submit | `devutils-cursor-plugin` |
+| **mcpservers.org** | https://mcpservers.org/submit | `devutils-mcp-server` |
+| **MCP Find** | https://www.mcpfind.org/submit | `devutils-mcp-server` |
+| **awesome-mcp-servers** | PR to `punkpeye/awesome-mcp-servers` | `devutils-mcp-server` |
 
-**Install (after listed):**
+## Plugin vs server
 
-```text
-/plugin marketplace add paladini/devutils-cursor-plugin
-/plugin install devutils-mcp@devutils-cursor-plugin
-```
+| Artifact | Repository | Used by |
+| --- | --- | --- |
+| MCP server (36 tools) | `devutils-mcp-server` | Registry, npm, Glama, Smithery, manual `mcp.json` |
+| Cursor + Claude plugin wrapper | `devutils-cursor-plugin` | Cursor Marketplace, cursor.directory, Claude plugin directory |
 
-## Official MCP Registry — your steps
+## Install paths by client
 
-The server repo has everything configured. You still need to:
+| Client | How users install |
+| --- | --- |
+| **Any MCP client** | `npx -y devutils-mcp-server` or Official MCP Registry |
+| **Cursor** | Customize → DevUtils MCP plugin |
+| **Claude Code** | `/plugin install devutils-mcp@devutils-cursor-plugin` (after approval) |
+| **Claude Desktop** | `mcp.json` block in config (see server README) |
+| **VS Code / Windsurf** | `mcp.json` (see server README) |
 
-1. `npm login` && `npm publish` in `devutils-mcp-server` (publishes `1.1.0` with `mcpName`)
-2. `mcp-publisher login github` (device code at https://github.com/login/device)
-3. `mcp-publisher publish`
+## Optional improvements
 
-Full guide: https://github.com/paladini/devutils-mcp-server/blob/main/REGISTRY_PUBLISH.md
+- Add GitHub topic `mcp-server` on `devutils-mcp-server` (helps Glama/directory crawlers)
+- Submit to `punkpeye/awesome-mcp-servers` (high-traffic list)
+- Claim/manage Glama listing if you want to update metadata manually
